@@ -7,5 +7,6 @@ import (
 )
 
 func indexHandler(c *gin.Context) {
-	c.String(http.StatusOK, "Hi from gin")
+	name := c.Param("name")
+	c.String(http.StatusOK, "Hello %s", name)
 }

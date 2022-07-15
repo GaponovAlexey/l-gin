@@ -7,5 +7,5 @@ import (
 func main() {
 	r := router.New()
 
-	r.Run()
+	r.Run(":3000")
 }

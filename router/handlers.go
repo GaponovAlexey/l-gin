@@ -12,7 +12,7 @@ func indexHandler(c *gin.Context) {
 func collectHandler(c *gin.Context) {
 	category := c.Param("category")
 	news.Collect(category)
-	c.String(http.StatusOK, "Search is initialized")
+	c.String(http.StatusOK, "Search is initialized", category)
 }
 func resultHandler(c *gin.Context) {
 	category := c.Param("category")

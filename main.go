@@ -1,8 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"l/gin/router"
+)
 
 func main() {
-	fmt.Println("you")
+	r := router.New()
 
+	r.Run()
 }

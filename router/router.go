@@ -1,7 +1,12 @@
 package router
 
+import (
+	"github.com/gin-gonic/gin"
+)
 
+func New() *gin.Engine {
+	r := gin.Default()
 
-func  router() {
-	
+	r.GET("/", indexHandler)
+	return r
 }

@@ -1,9 +1,9 @@
 package router
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
+	"l/gin/news"
+	"net/http"
 )
 
 func indexHandler(c *gin.Context) {

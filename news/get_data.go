@@ -15,7 +15,7 @@ type sourcesAPI struct {
 	Sources []source `json:"sources"`
 }
 
-type topicAPI struct {
+type topicsAPI struct {
 	Articles []Topic `json:"articles`
 }
 
@@ -45,7 +45,7 @@ func sourceURL(category string) string {
 }
 
 func topicURL(id string) string {
-	return fmt.Sprintf("https://newsapi.org/v1/sources?language=en&category=%s", id)
+	return fmt.Sprintf("https://newsapi.org/v1/articles?source=%s&sortBy=latest&apiKey=bf9a4c68daf4453c9edd9fe70fbd3b6e", id)
 }
 
 func getData(url string) []byte {
